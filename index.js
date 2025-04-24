@@ -33,7 +33,7 @@ const questions = [
         q: "Which of these is used to handle exceptions in Java?",
         options: ["throw", "try-catch", "catch-try", "throws"],
         answer: 1 
-    }
+    },
     {
         q: "What is the time complexity of binary search?",
         options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
