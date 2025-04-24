@@ -2,57 +2,57 @@ const questions = [
     {
         q: "What is the output of 3 + 2 * 2?",
         options: ["10", "7", "5", "9"],
-        answer: 2 // Index of "5"
+        answer: 2 
     },
     {
         q: "Which data structure uses FIFO?",
         options: ["Stack", "Queue", "Tree", "Graph"],
-        answer: 1 // Index of "Queue"
+        answer: 1 
     },
     {
         q: "What keyword is used to define a function in JavaScript?",
         options: ["func", "function", "def", "lambda"],
-        answer: 1 // Index of "function"
+        answer: 1 
     },
     {
         q: "Which of the following is not a primitive data type in Java?",
         options: ["int", "boolean", "String", "char"],
-        answer: 2 // Index of "String"
+        answer: 2 
     },
     {
         q: "What is the correct syntax to create a class in Java?",
         options: ["class MyClass {}", "MyClass class {}", "class MyClass()", "class = MyClass {}"],
-        answer: 0 // Index of "class MyClass {}"
+        answer: 0 
     },
     {
         q: "What is the correct way to declare an array in Java?",
         options: ["int arr[];", "int[] arr;", "arr[] int;", "int arr();"],
-        answer: 1 // Index of "int[] arr;"
+        answer: 1 
     },
     {
         q: "Which of these is used to handle exceptions in Java?",
         options: ["throw", "try-catch", "catch-try", "throws"],
-        answer: 1 // Index of "try-catch"
-    },
+        answer: 1 
+    }
     {
         q: "What is the time complexity of binary search?",
         options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
-        answer: 1 // Index of "O(log n)"
+        answer: 1 
     },
     {
         q: "A function in Python is defined as?",
         options: ["def", "function", "fun", "define"],
-        answer: 0 // Index of "def"
+        answer: 0 
     },
     {
         q: "What is the default value of a boolean variable in Java?",
         options: ["true", "false", "null", "0"],
-        answer: 1 // Index of "false"
+        answer: 1 
     }
 ];
 
 let index = -1;
-let score = 0; // Variable to store score
+let score = 0;
 
 window.addEventListener('DOMContentLoaded', () => {
     const intro = document.querySelector('.intro');
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
         index++;
 
         if (index === 0) {
-            intro.innerHTML = ""; // Clear intro
+            intro.innerHTML = "";
         }
 
         if (index < questions.length) {
@@ -77,25 +77,22 @@ window.addEventListener('DOMContentLoaded', () => {
             `;
             button.textContent = index === questions.length - 1 ? "Finish" : "Next";
 
-            // Add event listeners to option buttons
             const optionButtons = document.querySelectorAll('.option-btn');
             optionButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     const selectedIndex = parseInt(e.target.dataset.index);
 
-                    // Apply thicker border when clicked
                     e.target.classList.add('border-2');
 
                     if (selectedIndex === q.answer) {
-                        e.target.classList.add('border-green-500'); // Correct answer
+                        e.target.classList.add('border-green-500');
                         e.target.classList.remove('border-red-500');
-                        score++; // Increment score for correct answer
+                        score++;
                     } else {
-                        e.target.classList.add('border-red-500'); // Wrong answer
+                        e.target.classList.add('border-red-500');
                         e.target.classList.remove('border-green-500');
                     }
 
-                    // Disable all options after selecting one
                     optionButtons.forEach(btn => btn.disabled = true);
                 });
             });
