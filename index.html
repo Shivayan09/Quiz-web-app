@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Web App</title>
-  <link href="output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Web App</title>
+    <link href="output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-
-  <nav class="flex flex-wrap items-center justify-between px-4 md:px-16 lg:px-32 my-10">
-    <div class="text-black font-bold text-xl">CodeMaster</div>
-    <ul class="flex flex-wrap space-x-4">
-      <li class="transition transform duration-300 hover:scale-105 cursor-pointer">About</li>
-      <li class="transition transform duration-300 hover:scale-105 cursor-pointer">Contact</li>
-      <li class="transition transform duration-300 hover:scale-105 cursor-pointer">More</li>
-    </ul>
-  </nav>
-
-  <main class="flex flex-col items-center px-4 py-8">
-    <div class="w-full max-w-lg mx-auto bg-gray-300 rounded-2xl flex flex-col overflow-hidden">
-
-      <header class="border-b-2 w-full border-gray-600 p-4 text-center">
-        <h1 class="text-gray-800 font-semibold text-xl">Programming Quiz</h1>
-      </header>
-
-      <section class="p-6 flex-1">
-        <p class="text-gray-700 font-serif text-lg">
-          Welcome to CodeMaster Quiz! Sharpen your skills with this quick and engaging programming challenge.
-          10 carefully crafted questions await, testing your grasp of algorithms and coding basics.
-          Get started now and see how strong your foundation really is!
-        </p>
-      </section>
-
-      <footer class="p-4 flex justify-center">
-        <button
-          id="quiz-button"
-          class="py-3 px-6 bg-gray-700 text-gray-300 rounded-2xl transition transform duration-200 hover:scale-105 cursor-pointer">
-          Get Started Now
-        </button>
-      </footer>
-
+<body>
+    <nav class="h-14 mx-32 px-16 my-10 flex items-center justify-between">
+        <div class="heading text-black font-bold text-xl">CodeMaster</div>
+        <li class="text-black flex space-x-10">
+            <ul class="transition transform duration-300 hover:scale-[1.02] hover:cursor-pointer">About</ul>
+            <ul class="transition transform duration-300 hover:scale-[1.02] hover:cursor-pointer">Contact</ul>
+            <ul class="transition transform duration-300 hover:scale-[1.02] hover:cursor-pointer">More</ul>
+        </li>
+    </nav>
+    <div class="main h-[450px] w-[700px] bg-gray-300 mx-auto rounded-2xl flex flex-col">
+        <div class="quiz-header h-12 border-b-2 border-gray-600 mx-auto w-[650px] my-3 flex items-center justify-start">
+            <p class="text-gray-800 font-semibold text-xl mx-auto">Programming Quiz</p>
+        </div>
+        <div class="intro mx-20 my-10 -mb-5 flex-1">
+            <p class="text-gray-700 font-serif text-xl my-auto">Welcome to CodeMaster Quiz!
+                Sharpen your skills with this quick and engaging programming challenge.
+                10 carefully crafted questions await, testing your grasp of algorithms and coding basics.
+                Get started now and see how strong your foundation really is!
+            </p>
+        </div>
+        <div class="start-button flex-1 flex items-center justify-center">
+            <button class="h-12 bg-gray-700 w-48 text-gray-300 flex items-center justify-center rounded-2xl transition transform duration-200 hover:scale-[1.02] hover:cursor-pointer">Get Started Now</button>
+        </div>
     </div>
-  </main>
-
-  <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
